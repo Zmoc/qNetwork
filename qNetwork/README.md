@@ -1,7 +1,0 @@
-# qNetwork
-
-Goal: Optimize the delay and gate times in the counting of coincidences
-
-Method: Collect a sample of data over the range in question (initial collection should include the widest range possible/likely from equipment). The two features to collect are "Delay Time" and "Gate Time" that represent the time added between each detector and the time the second detector is open. The label to collect is "Coincidence Count" where the number of coincidences calculated for each combination. Step size should be small enough to provide at least 100-200 records. This can be adjusted based on collection constraints, but larger steps may result in fewer records spread out over a larger time frame (thus resulting in lower granularity). The collected data is then used to train a Random Forest model. This model will essentially "fill in" the gaps in the data collected, allowing a wider range to be covered with fewer records actually collected. From here, "hot spots" can be identified that hint towards ranges to focus on. These hot spots may also show patterns that can be utilized. Once these hot spots are found, the process can be repeated, but with a narrower range to investigate. This allows the step size to be smaller, while still keeping the collection process efficient.
-
-Intended Result: The intended end result is that, through repeated runs of the model, finer and finer range/step combinations can be employed to narrow down optimal combinations of Delay Time and Gate Time.
